@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <title>Tweets</title>
+<style>
+
+h1 {
+  margin: 2em;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.container { 
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 10px;
+}
+
+  .tweet {
+  text-align: center;
+  margin: 2em;
+  }
+</style>
+</head>
+
+<body>
+
+<script sync src="https://platform.twitter.com/widgets.js"></script>
+
+<script>
+
+  window.onload = (function(){
+    var tweets = document.querySelectorAll(".tweet");
+tweets.forEach(function(tweet) {
+  var id = tweet.getAttribute("tweetID");
+    twttr.widgets.createTweet(
+      id, tweet,
+      {
+        conversation : 'none',    // or all
+        cards        : 'hidden',  // or visible
+        linkColor    : '#cc0000', // default is blue
+        theme        : 'light'    // or dark
+      })
+  });
+});
+
+    
+
+</script>

@@ -1,36 +1,34 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Tweets</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tweet Collector</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐦</text></svg>"></head>
+  <style>
+    h1 {
+      margin: 1em;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    .container { 
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-gap: 10px;
+    }
 
-h1 {
-  margin: 1em;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-.container { 
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-gap: 10px;
-}
-
-  .tweet {
-  text-align: center;
-  margin: 2em;
-  }
-</style>
+    .tweet {
+      text-align: center;
+      margin: 2em;
+    }
+  </style>
 </head>
-
 <body>
-
 <script sync src="https://platform.twitter.com/widgets.js"></script>
-
 <script>
-
-  window.onload = (function(){
-    var tweets = document.querySelectorAll(".tweet");
-tweets.forEach(function(tweet) {
-  var id = tweet.getAttribute("tweetID");
+window.onload = (function(){
+  let tweets = document.querySelectorAll(".tweet");
+  tweets.forEach(function(tweet) {
+    let id = tweet.getAttribute("tweetID");
     twttr.widgets.createTweet(
       id, tweet,
       {
@@ -41,7 +39,6 @@ tweets.forEach(function(tweet) {
       })
   });
 });
-
-    
-
 </script>
+</body>
+</html>

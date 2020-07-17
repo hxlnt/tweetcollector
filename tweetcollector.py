@@ -14,7 +14,8 @@ try:
     tweetIdsFile = open(tweetIds, "r")
     lines = tweetIdsFile.readlines()
     tweetIdsFile.close()
-    htmlFile = open(os.path.splitext(tweetIds)[0] + ".html", "w")
+    htmlFilepath = os.path.splitext(tweetIds)[0] + ".html"
+    htmlFile = open(htmlFilepath, "w")
     for templateLine in templateLines:
         htmlFile.write(templateLine)
     htmlFile.write("<h1>" + os.path.splitext(tweetIds)[0] + "</h1><div class='container'>")
@@ -23,7 +24,7 @@ try:
         line = "<div class='tweet' tweetID='" + lineSplit[5].strip() + "'></div>\n"
         htmlFile.write(line)
     htmlFile.write("</div></body></html>")
-    print("Tweets from " + tweetIds + " added to " + os.path.splitext(tweetIds)[0] + ".html!")
+    print("Tweets from " + tweetIds + " added to " + htmlFilepath + "!")
 except:
     print("Something went wrong.")
 

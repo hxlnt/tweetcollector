@@ -1,0 +1,26 @@
+{
+  "name": "tweetcollector",
+  "version": "1.0.0",
+  "description": "Turns tweet URLs into screenshots.",
+  "main": "tweetcollector.js",
+  "dependencies": {
+    "puppeteer": "^5.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hxlnt/tweetcollector.git"
+  },
+  "keywords": [
+    "puppeteer"
+  ],
+  "author": "Rachel Simone Weil (hxlnt)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hxlnt/tweetcollector/issues"
+  },
+  "homepage": "https://github.com/hxlnt/tweetcollector#readme"
+}

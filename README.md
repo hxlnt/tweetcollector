@@ -1,5 +1,5 @@
 # tweetcollector
-This is a small (<30, dependency-free) Python 3 script that turns a user-provided text file of tweet URLs into an HTML page displaying a grid of embedded tweets.
+This is a small (<30, dependency-free) Python 3 script that turns a user-provided text file of tweet URLs into individual screenshots as well as an HTML page displaying a grid of embedded tweets.
 
 ## Usage
 
@@ -7,9 +7,9 @@ Add tweet URLs (one per line, no extra query parameters) to a text file, then pa
 
 `python tweetcollector.py "filename.txt"`
 
-An HTML file with the same filename will be generated. It will contain a grid of embedded tweets ideal for screenshotting or admiring in your free time.
+Equally-sized screenshots and an HTML file will be generated.
 
 ## TODO
 
-⬜ Use a Masonry-style layout
+⬜ Allow easy user customization of layout (ex: Masonry-style layout)
 
